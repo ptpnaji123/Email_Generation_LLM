@@ -1,0 +1,63 @@
+{
+    "mail": [
+        {
+            "subject": "Subject: Urgent - Payment Reminder for Invoice #9231",
+            "greeting": "Dear [Customer's Name],",
+            "paragraphs": [
+                "I hope this email finds you well. I am writing to remind you of the upcoming payment due date for Invoice #9231, which is scheduled for July 10th.",
+                "We understand that your attention might be divided among various aspects of your business, and we appreciate your timely attention to this matter. The prompt payment will help us continue providing the high-quality service you have come to expect from XYZ Services.",
+                "If you have already processed the payment for Invoice #9231, please accept our gratitude and disregard this email. If there are any issues or concerns regarding the invoice, kindly let us know at your earliest convenience so we can address them promptly.",
+                "Should you require any assistance with making the payment, please feel free to contact us through our usual channels. Our aim is to make the process as smooth and effortless for you as possible.",
+                "Thank you in advance for your cooperation, and we look forward to continuing our successful partnership.",
+                "Warm regards,",
+                "[Your Name]",
+                "Accounts Department",
+                "XYZ Services"
+            ],
+            "closing": "Best regards,\nName",
+            "date": "July 09, 2025"
+        },
+        {
+            "subject": "Spam Check Result - July 09, 2025",
+            "body": "Subject: Interview Invitation for Data Analyst Position\r\n\r\nDear Mohammed,\r\n\r\nThank you for applying to DigitalXC Ai. We would like to invite you for an interview to discuss your application further.\r\n\r\nDate: July 12, 2025\r\nTime: 11:00 AM\r\nMode: Google Meet (Link will be shared 1 day prior)\r\n\r\nPlease confirm your availability by replying to this email.\r\n\r\nRegards,\r\nHR Team\r\nDigitalXC Ai",
+            "date": "July 09, 2025"
+        },
+        {
+            "subject": "Subject: Request for Annual Paid Leave: July 15 - August 15, 2023",
+            "greeting": "Dear [Manager's Name],",
+            "paragraphs": [
+                "I hope this message finds you well. I am writing to formally request my annual paid leave for the period of July 15, 2023, through August 15, 2023.",
+                "This vacation is pre-planned, and I have ensured that my responsibilities will be covered during my absence. I will work diligently in the upcoming weeks to ensure a smooth transition of tasks to my colleagues.",
+                "I understand the importance of my role within our team, and I assure you that I will make every effort to minimize any disruption caused by my leave. Upon my return, I am more than willing to dedicate extra time and resources to catch up on any missed work and ensure a swift continuation of ongoing projects.",
+                "If there are any concerns or specific requirements regarding this request, please do not hesitate to reach out. I am open to discussing potential solutions that might accommodate your needs as well as mine.",
+                "Thank you for considering my request. I look forward to hearing from you soon."
+            ],
+            "closing": "Best regards,\n\n[Your Name]\n[Your Position]",
+            "date": "July 09, 2025"
+        },
+        {
+            "subject": "Subject: Request for Consideration for Promotion - [Your Name]",
+            "greeting": "Dear [Manager's Name],",
+            "paragraphs": [
+                "I hope this email finds you well. I am writing to formally express my interest in discussing the possibility of advancement within our organization, specifically with regards to the [Position Name] role.",
+                "Over the past [number of years you have been with the company], I have taken on increasingly challenging assignments, demonstrated a high level of commitment and dedication, and consistently delivered results beyond expectations. My contributions to projects such as [specific projects or achievements] have not only met but exceeded our departmental goals.",
+                "I believe that my skills, experience, and passion for our work align well with the responsibilities associated with the [Position Name]. In particular, I am confident in my abilities to lead teams effectively, implement innovative strategies, and drive significant results - all of which are crucial aspects of this role.",
+                "While I understand that promotions are based on a variety of factors, including business needs and departmental strategy, I believe that my growth within the organization has been steady and my potential for further development is substantial.",
+                "I would greatly appreciate the opportunity to discuss this matter further with you at your earliest convenience. Please let me know if there is a suitable time for us to arrange a meeting to discuss this request in more detail.",
+                "Thank you for considering my request. I look forward to our conversation and the continued opportunities for growth within our organization."
+            ],
+            "closing": "Best regards,\n\n[Your Name]\n[Your Position]\n[Your Contact Information]",
+            "date": "July 11, 2025"
+        }
+    ],
+    "spam": [
+        {
+            "subject": "Subject: Spam Check Result",
+            "greeting": "Dear User,",
+            "paragraphs": [
+                "fraud \r\nSubject: You\u2019ve Won a Free iPhone 15!\r\n\r\nDear Customer,\r\n\r\nCongratulations! You've been selected to receive a brand new iPhone 15 completely free. Just click the link below and enter your details to claim your prize:\r\n\r\n\ud83d\udc49 http://freeiphoneclaim-now.win\r\n\r\nOffer valid only for the next 6 hours. Act fast!\r\n\r\nBest regards,  \r\nPromo Team\r\n"
+            ],
+            "date": "July 09, 2025"
+        }
+    ]
+}

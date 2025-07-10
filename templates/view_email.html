@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Email</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<a href="/inbox" class="home-link">📥 Back to Inbox</a>
+<div class="container">
+    <h2>{{ email.subject }}</h2>
+    <p><strong>Date:</strong> {{ email.date }}</p>
+    
+    {% if email.get("greeting") %}
+        <p>{{ email.greeting }}</p>
+    {% endif %}
+    
+    {% if email.get("paragraphs") %}
+        {% for para in email.paragraphs %}
+            <p>{{ para }}</p>
+        {% endfor %}
+    {% elif email.get("body") %}
+        <p style="white-space: pre-wrap;">{{ email.body }}</p>
+    {% else %}
+        <p><em>No content available.</em></p>
+    {% endif %}
+
+    {% if email.get("closing") %}
+        <div>{{ email.closing.replace('\n', '<br>') | safe }}</div>
+    {% endif %}
+</div>
+</body>
+</html>
