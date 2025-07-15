@@ -79,7 +79,7 @@ Email_Generation_LLM/
 │
 ├── app.py                  # Main Flask app
 ├── testmail.py             # Calls Mistral model via Ollama
-├── spam_model.py           # Detects spam using Mistral
+├── classify_email.py           # Detects spam using Mistral
 ├── storage.py              # Handles email storage and retrieval
 ├── inbox_data.json         # Stores all emails
 │
