@@ -1,63 +1,107 @@
 {
-    "mail": [
-        {
-            "subject": "Subject: Urgent - Payment Reminder for Invoice #9231",
-            "greeting": "Dear [Customer's Name],",
-            "paragraphs": [
-                "I hope this email finds you well. I am writing to remind you of the upcoming payment due date for Invoice #9231, which is scheduled for July 10th.",
-                "We understand that your attention might be divided among various aspects of your business, and we appreciate your timely attention to this matter. The prompt payment will help us continue providing the high-quality service you have come to expect from XYZ Services.",
-                "If you have already processed the payment for Invoice #9231, please accept our gratitude and disregard this email. If there are any issues or concerns regarding the invoice, kindly let us know at your earliest convenience so we can address them promptly.",
-                "Should you require any assistance with making the payment, please feel free to contact us through our usual channels. Our aim is to make the process as smooth and effortless for you as possible.",
-                "Thank you in advance for your cooperation, and we look forward to continuing our successful partnership.",
-                "Warm regards,",
-                "[Your Name]",
-                "Accounts Department",
-                "XYZ Services"
-            ],
-            "closing": "Best regards,\nName",
-            "date": "July 09, 2025"
-        },
-        {
-            "subject": "Spam Check Result - July 09, 2025",
-            "body": "Subject: Interview Invitation for Data Analyst Position\r\n\r\nDear Mohammed,\r\n\r\nThank you for applying to DigitalXC Ai. We would like to invite you for an interview to discuss your application further.\r\n\r\nDate: July 12, 2025\r\nTime: 11:00 AM\r\nMode: Google Meet (Link will be shared 1 day prior)\r\n\r\nPlease confirm your availability by replying to this email.\r\n\r\nRegards,\r\nHR Team\r\nDigitalXC Ai",
-            "date": "July 09, 2025"
-        },
-        {
-            "subject": "Subject: Request for Annual Paid Leave: July 15 - August 15, 2023",
-            "greeting": "Dear [Manager's Name],",
-            "paragraphs": [
-                "I hope this message finds you well. I am writing to formally request my annual paid leave for the period of July 15, 2023, through August 15, 2023.",
-                "This vacation is pre-planned, and I have ensured that my responsibilities will be covered during my absence. I will work diligently in the upcoming weeks to ensure a smooth transition of tasks to my colleagues.",
-                "I understand the importance of my role within our team, and I assure you that I will make every effort to minimize any disruption caused by my leave. Upon my return, I am more than willing to dedicate extra time and resources to catch up on any missed work and ensure a swift continuation of ongoing projects.",
-                "If there are any concerns or specific requirements regarding this request, please do not hesitate to reach out. I am open to discussing potential solutions that might accommodate your needs as well as mine.",
-                "Thank you for considering my request. I look forward to hearing from you soon."
-            ],
-            "closing": "Best regards,\n\n[Your Name]\n[Your Position]",
-            "date": "July 09, 2025"
-        },
-        {
-            "subject": "Subject: Request for Consideration for Promotion - [Your Name]",
-            "greeting": "Dear [Manager's Name],",
-            "paragraphs": [
-                "I hope this email finds you well. I am writing to formally express my interest in discussing the possibility of advancement within our organization, specifically with regards to the [Position Name] role.",
-                "Over the past [number of years you have been with the company], I have taken on increasingly challenging assignments, demonstrated a high level of commitment and dedication, and consistently delivered results beyond expectations. My contributions to projects such as [specific projects or achievements] have not only met but exceeded our departmental goals.",
-                "I believe that my skills, experience, and passion for our work align well with the responsibilities associated with the [Position Name]. In particular, I am confident in my abilities to lead teams effectively, implement innovative strategies, and drive significant results - all of which are crucial aspects of this role.",
-                "While I understand that promotions are based on a variety of factors, including business needs and departmental strategy, I believe that my growth within the organization has been steady and my potential for further development is substantial.",
-                "I would greatly appreciate the opportunity to discuss this matter further with you at your earliest convenience. Please let me know if there is a suitable time for us to arrange a meeting to discuss this request in more detail.",
-                "Thank you for considering my request. I look forward to our conversation and the continued opportunities for growth within our organization."
-            ],
-            "closing": "Best regards,\n\n[Your Name]\n[Your Position]\n[Your Contact Information]",
-            "date": "July 11, 2025"
-        }
-    ],
-    "spam": [
-        {
-            "subject": "Subject: Spam Check Result",
-            "greeting": "Dear User,",
-            "paragraphs": [
-                "fraud \r\nSubject: You\u2019ve Won a Free iPhone 15!\r\n\r\nDear Customer,\r\n\r\nCongratulations! You've been selected to receive a brand new iPhone 15 completely free. Just click the link below and enter your details to claim your prize:\r\n\r\n\ud83d\udc49 http://freeiphoneclaim-now.win\r\n\r\nOffer valid only for the next 6 hours. Act fast!\r\n\r\nBest regards,  \r\nPromo Team\r\n"
-            ],
-            "date": "July 09, 2025"
-        }
-    ]
+    "mail": {
+        "general": [
+            {
+                "subject": "Subject: Request for Meeting to Discuss Project Roadmap\r\n\r\nBody:\r\n\r\nDear Mr. Sha...",
+                "body": "Subject: Request for Meeting to Discuss Project Roadmap\r\n\r\nBody:\r\n\r\nDear Mr. Sharma,\r\n\r\nI hope this message finds you well.\r\n\r\nI am writing to request a meeting to discuss the upcoming phases of the AI System Integration Project. We would like to align our development milestones and ensure all deliverables are on track.\r\n\r\nPlease let me know your availability this week so we can schedule a suitable time.\r\n\r\nLooking forward to your response.\r\n\r\nBest regards,\r\nMohammed Naji\r\nAI Developer\r\nFuture Optima IT Solutions Pvt Ltd\r\nmohammed.naji@example.com",
+                "date": "July 16, 2025",
+                "sub_category": "General",
+                "starred": true
+            }
+        ],
+        "promotion": [
+            {
+                "subject": "Subject: \ud83d\udc65 Ananya Reddy wants to connect with you on LinkedIn\r\n\r\nBody:\r\n\r\nHi Moh...",
+                "body": "Subject: \ud83d\udc65 Ananya Reddy wants to connect with you on LinkedIn\r\n\r\nBody:\r\n\r\nHi Mohammed,\r\n\r\nAnanya Reddy has sent you a connection request on LinkedIn.\r\n\r\n\ud83d\udcbc Senior Data Analyst at Infosys\r\n\ud83d\udccd Hyderabad, India\r\n\ud83d\udcdd \u201cHi Mohammed, I came across your profile and was impressed by your work in AI & Data Science. Would love to connect and explore opportunities to collaborate!\u201d\r\n\r\n\ud83d\udc49 Accept Invitation\r\n\r\nYou have 2 other pending requests waiting.\r\n\r\nThanks,\r\nThe LinkedIn Team\r\nwww.linkedin.example",
+                "date": "July 16, 2025",
+                "sub_category": "Promotion",
+                "starred": true
+            },
+            {
+                "subject": "Subject: \ud83c\udf81 Flat 60% OFF \u2013 Mega Monsoon Sale Ends Soon!\r\n\r\nBody:\r\n\r\nHi Mohammed,\r...",
+                "body": "Subject: \ud83c\udf81 Flat 60% OFF \u2013 Mega Monsoon Sale Ends Soon!\r\n\r\nBody:\r\n\r\nHi Mohammed,\r\n\r\nThe wait is over! Our Mega Monsoon Sale is here with FLAT 60% OFF on all your favorite fashion essentials.\r\n\r\n\ud83d\udc55 Trending Apparel\r\n\ud83d\udc5f Branded Footwear\r\n\ud83d\udd76\ufe0f Accessories & More\r\n\r\n\ud83d\uded2 Use Code: MONSOON60\r\n\ud83d\udcc5 Valid Till: July 20, 2025\r\n\ud83d\udd17 Shop the Sale Now\r\n\r\nHurry \u2014 limited stock available!\r\n\r\nHappy Shopping,\r\nTeam TrendX",
+                "date": "July 16, 2025",
+                "sub_category": "Promotion",
+                "starred": false
+            },
+            {
+                "subject": "Subject: Exclusive Opportunity: Upgrade Your Experience with Our Premium Services!",
+                "greeting": "Dear [Recipient's Name],",
+                "paragraphs": [
+                    "I hope this message finds you well. I am writing to bring to your attention an exciting offer from our team that we believe will significantly enhance your experience with us.",
+                    "We have recently introduced a range of premium services designed to cater to the needs of our valued customers like you, who seek an unparalleled level of convenience and quality in their interactions with us. These services are not just upgrades; they represent a new standard in customer service that we are confident will exceed your expectations.",
+                    "Here's a sneak peek at what you can expect:",
+                    "1. Priority Support: With our premium service, you'll have direct access to our dedicated support team, ensuring quicker response times and faster resolution of any issues you may encounter.",
+                    "2. Exclusive Access: You'll gain early access to new features, products, and services before anyone else, giving you an edge in today's competitive market.",
+                    "3. Dedicated Account Manager: A personal account manager will be assigned to you, providing a single point of contact for all your needs and ensuring a seamless experience.",
+                    "4. Enhanced Security: Enjoy increased security features designed to safeguard your data and transactions, giving you peace of mind.",
+                    "We are offering this premium service at an introductory price, exclusively for our valued customers like you. To take advantage of this offer, simply click on the link below and follow the prompts to upgrade your account:",
+                    "[Link to Upgrade Page]",
+                    "If you have any questions or need further clarification, please do not hesitate to reach out to us at [Customer Service Email]. Our team is ready and eager to assist you.",
+                    "We value your continued partnership and are committed to providing you with the best service possible. We believe that this premium offering will greatly enhance your experience with us and look forward to serving you better.",
+                    "Thank you for choosing us, and we hope to continue our relationship in the premium league!"
+                ],
+                "closing": "Best Regards,\n\n[Your Name]\n[Your Position]\n[Your Contact Information]",
+                "date": "July 16, 2025",
+                "sub_category": "Promotion",
+                "starred": false
+            }
+        ],
+        "social": [
+            {
+                "subject": "Subject: \ud83d\udc65 Ananya Reddy wants to connect with you on LinkedIn\r\n\r\nBody:\r\n\r\nHi Moh...",
+                "body": "Subject: \ud83d\udc65 Ananya Reddy wants to connect with you on LinkedIn\r\n\r\nBody:\r\n\r\nHi Mohammed,\r\n\r\nAnanya Reddy has sent you a connection request on LinkedIn.\r\n\r\n\ud83d\udcbc Senior Data Analyst at Infosys\r\n\ud83d\udccd Hyderabad, India\r\n\ud83d\udcdd \u201cHi Mohammed, I came across your profile and was impressed by your work in AI & Data Science. Would love to connect and explore opportunities to collaborate!\u201d\r\n\r\n\ud83d\udc49 Accept Invitation\r\n\r\nYou have 2 other pending requests waiting.\r\n\r\nThanks,\r\nThe LinkedIn Team\r\nwww.linkedin.example",
+                "date": "July 16, 2025",
+                "sub_category": "Social",
+                "starred": true
+            },
+            {
+                "subject": "Subject: Request to Connect on LinkedIn - [Your Friend's Name]",
+                "greeting": "Dear [Recipient's Name],",
+                "paragraphs": [
+                    "I hope this message finds you well. I came across your profile on LinkedIn and was immediately struck by the impressive work you have been doing in [Their field/industry]. Given our shared interest in [Specific area or project], I believe we could potentially learn a lot from each other's experiences and insights.",
+                    "I would be delighted to connect with you on LinkedIn, if you are open to it. I am looking forward to staying updated about your career progression and the exciting projects you are working on. If you have any specific areas where you think we could collaborate or support each other, please feel free to let me know.",
+                    "Thank you for considering my request. I look forward to connecting with you soon!"
+                ],
+                "closing": "Best regards,\n[Your Name]\n[Your LinkedIn Profile URL]",
+                "date": "July 16, 2025",
+                "sub_category": "Social",
+                "starred": false
+            }
+        ]
+    },
+    "spam": {
+        "spam": [
+            {
+                "subject": "Subject: \ud83e\udd11 Get Rich Quick! Earn \u20b910,000 Daily Without Any Effort!\r\n\r\nBody:\r\n\r\nDe...",
+                "body": "Subject: \ud83e\udd11 Get Rich Quick! Earn \u20b910,000 Daily Without Any Effort!\r\n\r\nBody:\r\n\r\nDear Friend,\r\n\r\nThis is your once-in-a-lifetime opportunity to become financially free!\r\nJoin our automated money system that generates income for you while you sleep.\r\n\r\n\u2705 No experience needed\r\n\u2705 No investment required\r\n\u2705 100% Guaranteed Returns\r\n\r\nThousands are already making money using this secret method. Why wait?\r\n\r\n\ud83d\udc49 Click Here to Start Earning Now\r\n\r\nDon't miss out \u2014 this offer expires in 24 hours!\r\n\r\nTo your success,\r\nMr. Rajesh Kumar\r\nFinancial Freedom Consultant",
+                "date": "July 16, 2025",
+                "sub_category": "Spam",
+                "starred": true
+            },
+            {
+                "subject": "Subject: Exclusive Offer - Unbelievable Opportunity Awaits!",
+                "greeting": "Dear Valued Recipient,",
+                "paragraphs": [
+                    "Greetings from [Fictitious Company Name]! We hope this message finds you in the best of health and spirits.",
+                    "We have an exciting opportunity that we believe aligns perfectly with your interests. We've noticed your online activities and thought you might be interested in our groundbreaking product/service that promises to revolutionize [specific industry].",
+                    "Our [product/service] is more than just a tool; it's a game-changer. It offers unparalleled features designed to streamline your operations, increase productivity, and drive significant growth for your business.",
+                    "To give you a taste of what we have in store, we are extending an exclusive invitation for you to claim a free trial. This offer is only available for a limited time, so don't miss out on this incredible opportunity!",
+                    "To activate your free trial, simply click the link below and follow the instructions: [Insert Malicious Link]",
+                    "Remember, opportunities like this don't come around often, so seize this chance now to take your business to new heights. If you have any questions or need further information, feel free to reply to this email. Our customer service team is standing by to assist you.",
+                    "We look forward to welcoming you as our valued client and helping you unlock the full potential of your business with [Fictitious Company Name].",
+                    "Warm regards,",
+                    "[Your Name]",
+                    "[Your Position]",
+                    "[Company Name]",
+                    "[Website URL]",
+                    "[Phone Number]"
+                ],
+                "closing": "Best regards,\nName",
+                "date": "July 16, 2025",
+                "sub_category": "Spam",
+                "starred": false
+            }
+        ]
+    }
 }

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Email Assistant{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="layout">
+        <div class="sidebar">
+            <h2>📥 Inbox</h2>
+            <a href="{{ url_for('home') }}" class="nav-btn">🏠 Home</a>
+            <form action="{{ url_for('inbox') }}" method="get">
+                <input type="hidden" name="filter" value="all">
+                <button type="submit">📧 All Mails</button>
+            </form>
+            
+            <form action="{{ url_for('inbox') }}" method="get">
+                <input type="hidden" name="filter" value="spam">
+                <button type="submit" class="spam-btn">🚫 Spam Mails</button>
+            </form>
+            <form action="{{ url_for('inbox') }}" method="get">
+                <input type="hidden" name="filter" value="starred">
+                <button type="submit" class="starred-btn">⭐ Starred Mails</button>
+            </form>
+        </div>
+
+        <div class="main-content">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</body>
+</html>

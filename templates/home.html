@@ -1,91 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Email Tools</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <style>
-        body {
-            display: flex;
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-        }
-
-        .sidebar {
-            width: 250px;
-            background-color: #f8f9fa;
-            padding: 20px;
-            height: 100vh;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .sidebar h2 {
-            margin-bottom: 20px;
-        }
-
-        .sidebar button {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            font-size: 16px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            background-color: #007bff;
-            color: white;
-        }
-
-        .spam-btn {
-            background-color: #dc3545;
-        }
-
-        .main-content {
-            flex-grow: 1;
-            padding: 40px;
-        }
-
-        .menu {
-            text-align: center;
-            margin-top: 100px;
-        }
-
-        .menu h1 {
-            margin-bottom: 40px;
-        }
-
-        .menu button {
-            padding: 15px 30px;
-            font-size: 18px;
-            margin: 20px;
-            cursor: pointer;
-            border: none;
-            border-radius: 8px;
-            color: white;
-        }
-
-        .generate-btn {
-            background-color: #007bff;
-        }
-    </style>
-</head>
-<body>
-    <div class="sidebar">
-        <h2>📥 Inbox</h2>
-        <form action="/inbox" method="get" style="margin-bottom: 15px;">
-            <input type="hidden" name="filter" value="all">
-            <button type="submit">📧 All Mails</button>
-        </form>
-        <form action="/inbox" method="get">
-            <input type="hidden" name="filter" value="spam">
-            <button type="submit" class="spam-btn">🚫 Spam Mails</button>
-        </form>
+{% extends "base.html" %}
+{% block title %}Home - Email Assistant{% endblock %}
+{% block content %}
+<div class="home-wrapper">
+    <h1>Welcome to Email Assistant / Spam Detection</h1>
+    <div class="button-group">
+        <a href="{{ url_for('generate') }}"><button class="generate-btn">📧 Generate Email</button></a>
+        <a href="{{ url_for('spam') }}"><button class="spam-btn">🚫 Detect Spam Email</button></a>
     </div>
-
-    <div class="main-content">
-        <div class="menu">
-            <h1>Welcome to Email Assistant / Spam Detection</h1>
-            <a href="/generate"><button class="generate-btn">📧 Generate Email</button></a>
-            <a href="/spam"><button class="spam-btn">🚫 Detect Spam Email</button></a>
-        </div>
-    </div>
-</body>
-</html>
+</div>
+{% endblock %}

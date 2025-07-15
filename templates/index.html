@@ -1,105 +1,110 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Email Generator</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
-<body>
-    <a href="/" class="home-link">🏠 Home</a>
-    
-    <div class="container">
-        <h1>Email Generator Assistant</h1>
+{% extends "base.html" %}
+{% block title %}Generate Email{% endblock %}
 
-        <form method="POST">
-            <textarea name="prompt" placeholder="Describe your email need..." required></textarea>
+{% block content %}
+<div class="container">
+    <h1>Email Generator Assistant</h1>
+
+    <form method="POST" style="margin-bottom: 30px;">
+        <textarea name="prompt" placeholder="Describe your email need..." required></textarea>
+        <div style="margin-top: 10px;">
             <button type="submit" name="action" value="generate">Generate</button>
             <button type="reset" class="clear-btn">Clear</button>
-        </form>
+        </div>
+    </form>
 
-        {% if email %}
-            <!-- Font Selection -->
-            <div class="font-controller">
-                <label for="font-global">Font for entire email:</label>
-                <select id="font-global" onchange="changeGlobalFont()">
-                    <option value="Arial">Arial</option>
-                    <option value="Georgia">Georgia</option>
-                    <option value="Times New Roman">Times New Roman</option>
-                    <option value="Courier New">Courier New</option>
-                    <option value="Verdana">Verdana</option>
-                    <option value="Comic Sans MS">Comic Sans MS</option>
-                    <option value="Lucida Console">Lucida Console</option>
-                    <option value="Tahoma">Tahoma</option>
-                    <option value="Garamond">Garamond</option>
-                    <option value="italic">Italic Style</option>
-                </select>
-            </div>
+    {% if email %}
+        <!-- Font Selection -->
+        <div class="font-controller" style="margin-bottom: 10px;">
+            <label for="font-global">Font for entire email:</label>
+            <select id="font-global" onchange="changeGlobalFont()">
+                <option value="Arial">Arial</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Comic Sans MS">Comic Sans MS</option>
+                <option value="Lucida Console">Lucida Console</option>
+                <option value="Tahoma">Tahoma</option>
+                <option value="Garamond">Garamond</option>
+                <option value="italic">Italic Style</option>
+            </select>
+        </div>
 
-            <!-- Toolbar for selected text -->
-            <div class="toolbar">
-                <button type="button" onclick="document.execCommand('bold')"><b>B</b></button>
-                <button type="button" onclick="document.execCommand('underline')"><u>U</u></button>
-            </div>
+        <!-- Toolbar -->
+        <div class="toolbar" style="margin-bottom: 10px;">
+            <button type="button" onclick="document.execCommand('bold')"><b>B</b></button>
+            <button type="button" onclick="document.execCommand('underline')"><u>U</u></button>
+        </div>
 
-            <!-- Copy Button -->
-            <div class="copy-wrapper">
-                <button type="button" id="copyBtn" onclick="copyEmailToClipboard()">📋 Copy Email</button>
-                <span id="copy-status" class="copy-status"></span>
-            </div>
+        <!-- Copy Button -->
+        <div class="copy-wrapper" style="margin-bottom: 15px;">
+            <button type="button" id="copyBtn" onclick="copyEmailToClipboard()">📋 Copy Email</button>
+            <span id="copy-status" class="copy-status"></span>
+        </div>
 
-            <!-- Email Output -->
-            <div class="chat-output" id="email-preview" contenteditable="true">
-                {% if email.error %}
-                    <p style="color: red;"><strong>Error:</strong> {{ email.error }}</p>
-                {% else %}
-                    <div><strong>Date:</strong> {{ email.date }}</div>
-                    <div><strong>{{ email.subject }}</strong></div>
-                    <div><strong>{{ email.greeting }}</strong></div>
-                    {% for para in email.paragraphs %}
-                        <p>{{ para }}</p>
-                    {% endfor %}
-                    <div class="footer">
-                        {{ email.closing.replace('\n', '<br>') | safe }}
-                    </div>
+        <!-- Email Preview -->
+        <div class="email-preview-box" id="email-preview" contenteditable="true">
+            {% if email.error %}
+                <p style="color: red;"><strong>Error:</strong> {{ email.error }}</p>
+            {% else %}
+                <p style="margin-bottom: 10px; font-size: 14px; color: gray;"><em>Date: {{ email.date }}</em></p>
+                <h2 style="margin-bottom: 15px;">{{ email.subject }}</h2>
+
+                {% if email.greeting %}
+                    <p style="margin-bottom: 15px;">{{ email.greeting }}</p>
                 {% endif %}
-            </div>
-        {% endif %}
-    </div>
 
-    <script>
-        function changeGlobalFont() {
-            const selectedFont = document.getElementById("font-global").value;
-            const previewBox = document.getElementById("email-preview");
+                {% if email.paragraphs %}
+                    {% for para in email.paragraphs %}
+                        <p style="margin-bottom: 15px;">{{ para }}</p>
+                    {% endfor %}
+                {% elif email.body %}
+                    <p style="white-space: pre-wrap; margin-bottom: 15px;">{{ email.body }}</p>
+                {% endif %}
 
-            if (selectedFont === "italic") {
-                previewBox.style.fontStyle = "italic";
-                previewBox.style.fontFamily = "Arial";
-            } else {
-                previewBox.style.fontFamily = selectedFont;
-                previewBox.style.fontStyle = "normal";
-            }
+                {% if email.closing %}
+                    <p style="margin-top: 25px;">{{ email.closing.replace('\n', '<br>') | safe }}</p>
+                {% endif %}
+            {% endif %}
+        </div>
+    {% endif %}
+</div>
+
+<script>
+    function changeGlobalFont() {
+        const selectedFont = document.getElementById("font-global").value;
+        const previewBox = document.getElementById("email-preview");
+
+        if (selectedFont === "italic") {
+            previewBox.style.fontStyle = "italic";
+            previewBox.style.fontFamily = "Arial";
+        } else {
+            previewBox.style.fontFamily = selectedFont;
+            previewBox.style.fontStyle = "normal";
         }
+    }
 
-        function copyEmailToClipboard() {
-            const preview = document.getElementById("email-preview");
-            const status = document.getElementById("copy-status");
+    function copyEmailToClipboard() {
+        const preview = document.getElementById("email-preview");
+        const status = document.getElementById("copy-status");
 
-            if (preview) {
-                const range = document.createRange();
-                range.selectNodeContents(preview);
-                const selection = window.getSelection();
+        if (preview) {
+            const range = document.createRange();
+            range.selectNodeContents(preview);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+
+            try {
+                document.execCommand("copy");
                 selection.removeAllRanges();
-                selection.addRange(range);
-
-                try {
-                    document.execCommand("copy");
-                    selection.removeAllRanges();
-                    status.textContent = "Copied!";
-                    setTimeout(() => { status.textContent = ""; }, 1500);
-                } catch (err) {
-                    status.textContent = "Failed to copy!";
-                }
+                status.textContent = "Copied!";
+                setTimeout(() => { status.textContent = ""; }, 1500);
+            } catch (err) {
+                status.textContent = "Failed to copy!";
             }
         }
-    </script>
-</body>
-</html>
+    }
+</script>
+{% endblock %}
