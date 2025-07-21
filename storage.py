@@ -25,7 +25,6 @@ def _load_data() -> dict:
 def _save_data(data: dict):
     with open(STORAGE_FILE, "w") as f:
         json.dump(data, f, indent=4)
-
 def save_mail(email_data: dict, is_spam: bool = False):
     data = _load_data()
     main_category = "spam" if is_spam else "mail"
@@ -35,6 +34,8 @@ def save_mail(email_data: dict, is_spam: bool = False):
         sub_category = "spam"
     elif sub_category not in ["promotion", "social"]:
         sub_category = "general"
+
+    email_data["read"] = False  # New emails are unread
 
     data.setdefault(main_category, {}).setdefault(sub_category, []).append(email_data)
     _save_data(data)

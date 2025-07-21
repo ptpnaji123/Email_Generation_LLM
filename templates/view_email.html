@@ -1,26 +1,36 @@
 {% extends "base.html" %}
 {% block title %}View Email{% endblock %}
 {% block content %}
-<div class="container">
-    <h2>{{ email.subject }}</h2>
+
+<a href="{{ url_for('inbox', filter=category, sub=request.args.get('sub', 'general')) }}" class="go-back-btn">
+    ← Go Back
+</a><div class="email-content-box" style="
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+">
+    <style>
+        .email-content-box p {
+            margin: 4px 0;  /* Reduce space between paragraphs */
+            line-height: 1.4; /* Tighter line spacing */
+        }
+    </style>
+
+    <h5>{{ email.subject }}</h5>
     <p><strong>Date:</strong> {{ email.date }}</p>
-
-    {% if email.get("greeting") %}
-        <p>{{ email.greeting }}</p>
-    {% endif %}
-
-    {% if email.get("paragraphs") %}
-        {% for para in email.paragraphs %}
-            <p>{{ para }}</p>
-        {% endfor %}
-    {% elif email.get("body") %}
-        <p style="white-space: pre-wrap;">{{ email.body }}</p>
-    {% else %}
-        <p><em>No content available.</em></p>
-    {% endif %}
-
-    {% if email.get("closing") %}
-        <div>{{ email.closing.replace('\n', '<br>') | safe }}</div>
-    {% endif %}
+    <p><strong>From:</strong> {{ email.sender }}</p>
+    <hr>
+    <div style="font-size: 16px;">
+        {{ email.body|safe }}
+    </div>
 </div>
+
+
+
 {% endblock %}

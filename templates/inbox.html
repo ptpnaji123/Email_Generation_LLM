@@ -8,12 +8,10 @@
 
         {% if category == 'mail' %}
         <div class="sub-toolbar">
-        <a href="{{ url_for('inbox', filter='mail', sub='general') }}" class="sub-tab {% if sub_filter == 'general' %}active-tab{% endif %}">📧 General</a>
-        <a href="{{ url_for('inbox', filter='mail', sub='promotion') }}" class="sub-tab {% if sub_filter == 'promotion' %}active-tab{% endif %}">📢 Promotion</a>
-        <a href="{{ url_for('inbox', filter='mail', sub='social') }}" class="sub-tab {% if sub_filter == 'social' %}active-tab{% endif %}">👥 Social</a>
+            <a href="{{ url_for('inbox', filter='mail', sub='general') }}" class="sub-tab {% if sub_filter == 'general' %}active-tab{% endif %}">📧 General</a>
+            <a href="{{ url_for('inbox', filter='mail', sub='promotion') }}" class="sub-tab {% if sub_filter == 'promotion' %}active-tab{% endif %}">📢 Promotion</a>
+            <a href="{{ url_for('inbox', filter='mail', sub='social') }}" class="sub-tab {% if sub_filter == 'social' %}active-tab{% endif %}">👥 Social</a>
         </div>
-
-        
         {% endif %}
 
         {% if category != 'starred' %}
@@ -34,13 +32,23 @@
             {% endif %}
 
             <div class="email-details">
-                <a href="{{ url_for('view_email', category=category, email_id=loop.index0, sub=sub_filter) }}" class="email-subject">
-                    {{ email.subject }}
+                <a href="{{ url_for('view_email', category=category, email_id=loop.index0, sub=sub_filter) }}"
+                   class="email-subject"
+                   style="font-weight: {{ 'bold' if not email.get('read', False) else 'normal' }};">
+                   {{ email.subject }}
                 </a>
-                <div class="email-preview">
-                    {{ email.body[:80] if email.body else email.paragraphs[0][:80] if email.paragraphs else '' }}
-                    {% if (email.body and email.body|length > 80) or (email.paragraphs and email.paragraphs[0]|length > 80) %}...{% endif %}
+
+                <div class="email-preview"
+                     style="font-weight: {{ 'bold' if not email.get('read', False) else 'normal' }};">
+                    {% if email.body %}
+                        {{ email.body | striptags | truncate(80) }}
+                    {% elif email.paragraphs %}
+                        {{ email.paragraphs[0] | truncate(80) }}
+                    {% else %}
+                        No content available.
+                    {% endif %}
                 </div>
+
                 <div class="email-date">{{ email.date }}</div>
             </div>
 
@@ -65,14 +73,13 @@
         const isStarredPage = currentURL.searchParams.get("filter") === "starred";
 
         fetch(`/toggle_star/${category}/${emailId}?sub=${sub}`, {
-         method: 'POST'
-})
-
+            method: 'POST'
+        })
         .then(res => res.json())
         .then(data => {
             btn.innerText = data.starred ? '⭐' : '☆';
             if (!data.starred && isStarredPage) {
-                card.remove(); // Remove unstarred email from the starred view
+                card.remove(); // Remove unstarred email from starred inbox
             }
         });
     }

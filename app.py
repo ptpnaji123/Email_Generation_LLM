@@ -3,8 +3,31 @@ from testmail import call_model
 from classify_email import classify_email
 from storage import save_mail, get_all_emails, get_email_by_id, delete_emails_by_ids
 from datetime import datetime
+from gmailfetcher import authenticate_gmail, fetch_emails
 
 app = Flask(__name__)
+
+@app.route("/fetch_gmail")
+def fetch_gmail():
+    service = authenticate_gmail()
+    emails = fetch_emails(service, max_results=5)
+
+    for email in emails:
+        category = classify_email(email['body'])
+        is_spam = (category.lower() == "spam")
+
+        save_mail({
+            "subject": email["subject"],
+            "from": email["from"],
+            "date": datetime.now().strftime("%B %d, %Y"),
+            "body": email["body"],
+            "paragraphs": [],
+            "sub_category": category,
+            "starred": False,
+            "read": False
+        }, is_spam=is_spam)
+
+    return redirect(url_for("inbox"))
 
 @app.route("/")
 def home():
@@ -22,7 +45,8 @@ def generate():
             content = " ".join(result.get("paragraphs", []))
             category = classify_email(content)
             result["sub_category"] = category
-            result["starred"] = False  # Default starred status
+            result["starred"] = False
+            result["read"] = False
             is_spam = category.lower() == "spam"
             save_mail(result, is_spam=is_spam)
             email_data = result
@@ -42,9 +66,11 @@ def spam():
         email_data = {
             "subject": content[:80] + "..." if len(content) > 80 else content,
             "body": content.strip(),
+            "paragraphs": [],
             "date": datetime.now().strftime("%B %d, %Y"),
             "sub_category": category,
-            "starred": False  # Default starred status
+            "starred": False,
+            "read": False
         }
 
         save_mail(email_data, is_spam=is_spam)
@@ -82,10 +108,26 @@ def inbox():
 
 @app.route("/inbox/<category>/<int:email_id>")
 def view_email(category, email_id):
-    sub_filter = request.args.get("sub", "spam" if category == "spam" else "general")
+    sub_filter = request.args.get("sub")
+    if not sub_filter:
+        sub_filter = "spam" if category == "spam" else "general"
+    if category == "spam":
+        sub_filter = "spam"
+
     email = get_email_by_id(category, email_id, sub_filter)
     if not email:
         return "Email not found", 404
+
+    if not email.get("read", False):
+        email["read"] = True
+        all_emails = get_all_emails(category, sub_filter)
+        if 0 <= email_id < len(all_emails):
+            all_emails[email_id] = email
+            from storage import _load_data, _save_data
+            store = _load_data()
+            store[category][sub_filter] = all_emails
+            _save_data(store)
+
     return render_template("view_email.html", email=email)
 
 @app.route("/delete", methods=["POST"])
@@ -93,7 +135,6 @@ def delete_emails():
     category = request.form.get("category")
     sub_filter = request.form.get("sub")
 
-    # Ensure sub_filter is correct
     if not sub_filter or category == "spam":
         sub_filter = "spam" if category == "spam" else "general"
 
@@ -106,17 +147,13 @@ def delete_emails():
     redirect_filter = "spam" if category == "spam" else None
     return redirect(url_for("inbox", filter=redirect_filter, sub=sub_filter))
 
-
-
 @app.route("/toggle_star/<category>/<int:email_id>", methods=["POST"])
 def toggle_star(category, email_id):
     sub_filter = request.args.get("sub")
-
     if not sub_filter:
         sub_filter = "spam" if category == "spam" else "general"
-
     if category == "spam":
-        sub_filter = "spam"  # Force it for spam mails
+        sub_filter = "spam"
 
     email = get_email_by_id(category, email_id, sub_filter)
     if not email:
