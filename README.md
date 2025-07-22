@@ -1,89 +1,96 @@
-# 📧 Email Generation and Spam Detection using LLM (Mistral + Ollama)
 
-This project is a Flask-based web application that allows users to:
-- Generate professional emails using the Mistral LLM via Ollama.
-- Detect whether pasted email content is **spam** or **not spam**.
-- View, manage, and delete stored emails (spam and non-spam) with a clean UI.
+📧 Email Assistant with LLM and Gmail Integration
 
----
+🔧 Features
 
-## 🔧 Features
+- ✍️ Generate professional emails using prompts.
+- 🚫 Detect spam using a local AI model (Mistral via Ollama).
+- 📥 Manage a local inbox with spam filtering, starring, and categorization (General, Promotion, Social).
+- 💌 View full email content with a "Go Back" option.
+- 📬 Fetch real Gmail inbox content using the Gmail API.
+- 🖱️ Copy content, format fonts, and delete emails easily.
+- 🗃️ Emails are stored locally in JSON (inbox_data.json).
 
-- ✍️ Email generation using prompts.
-- 🚫 Spam detection for custom email content.
-- 📨 Mail inbox and spam section with viewing and deleting.
-- 🎨 Interactive front-end with font formatting and copy options.
-- ✅ Mails stored locally in `inbox_data.json`.
+⚙️ Setup Instructions
 
----
+1. 📥 Install Ollama
 
-## ⚙️ Setup Instructions
-
-### 1. 📥 Install Ollama
-
-Download and install Ollama from their official website:
-
+Download and install Ollama from the official website:
 👉 https://ollama.com
 
-> Ollama runs a local server to interface with open-source large language models.
+Ollama runs a local server that serves open-source LLMs like Mistral.
 
----
+2. 🧠 Download and Run Mistral Model via Ollama
 
-### 2. 🚀 Run Ollama and Download the Mistral Model
+    ollama run mistral
 
-Open your terminal and start Ollama:
+Ensure Ollama is running at http://localhost:11434.
 
-```bash
-ollama run mistral
-```
-### 3. 💻 Clone This Repository
+3. 💻 Clone This Repository
 
-```bash
-git clone https://github.com/ptpnaji123/Email_Generation_LLM.git
-cd Email_Generation_LLM
-```
+    git clone https://github.com/ptpnaji123/Email_Generation_LLM.git
+    cd Email_Generation_LLM
 
----
-
-### 4. 🐍 Set Up Python Environment
+4. 🐍 Set Up Python Environment
 
 Ensure Python 3.8+ is installed.
 
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-```
+    python -m venv venv
+    source venv/bin/activate      # On Windows: venv\Scripts\activate
+    pip install -r requirements.txt
 
-> If `requirements.txt` does not exist, manually install Flask:
-```bash
-pip install Flask
-```
+If requirements.txt is missing, install manually:
 
----
+    pip install Flask google-api-python-client google-auth google-auth-oauthlib
 
-### 5. ▶️ Run the Flask App
+5. 📧 Setup Gmail API
 
-```bash
-python app.py
-```
+To fetch real emails from Gmail:
 
-Navigate to `http://localhost:5000` in your browser.
+a. Go to Google Cloud Console:
+👉 https://console.cloud.google.com
 
----
+- Create a project (or use an existing one)
+- Go to APIs & Services > Library
+- Search for Gmail API and enable it
 
-## 📁 Project Structure
+b. Set Up OAuth 2.0 Credentials
 
-```
+- Go to APIs & Services > Credentials
+- Click Create Credentials > OAuth client ID
+- Choose Desktop App
+- Download the generated file and rename it:
+
+    credentials.json
+
+Place this credentials.json file in the root directory of your project.
+
+c. Generate token.json
+
+The first time you run Gmail integration, a browser window will open asking for permission. After allowing access, token.json will be created automatically in the same directory. This stores your access tokens securely.
+
+6. ▶️ Run the Flask App
+
+    python app.py
+
+Then visit in your browser:
+
+    http://localhost:5000
+
+📁 Project Structure
+
 Email_Generation_LLM/
 │
 ├── app.py                  # Main Flask app
-├── testmail.py             # Calls Mistral model via Ollama
-├── classify_email.py           # Detects spam using Mistral
-├── storage.py              # Handles email storage and retrieval
-├── inbox_data.json         # Stores all emails
+├── testmail.py             # Email generator using LLM
+├── classify_email.py       # Spam detection logic using Mistral
+├── gmail_fetcher.py        # Gmail API integration
+├── storage.py              # Local JSON storage handler
+├── inbox_data.json         # Stores categorized email data
+├── credentials.json        # OAuth credentials for Gmail (downloaded from Google Cloud)
+├── token.json              # Stores user's Gmail access tokens
 │
-├── templates/              # HTML files
+├── templates/              # Jinja2 HTML templates
 │   ├── home.html
 │   ├── inbox.html
 │   ├── index.html
@@ -91,36 +98,38 @@ Email_Generation_LLM/
 │   └── view_email.html
 │
 ├── static/
-│   └── styles.css          # Styling
+│   └── styles.css          # Frontend styles
 │
-├── .gitignore              # (optional) Ignore cache or sensitive files
-└── README.md
-```
+├── requirements.txt
+├── .gitignore
+└── README.md               # You're reading it
 
----
+✅ Usage Instructions
 
-## ✅ Usage Instructions
+- Generate Email: Enter a prompt and receive a formal email.
+- Detect Spam Email: Paste any text and detect if it’s spam.
+- Inbox:
+  - Switch views between General, Promotion, Social, and Spam.
+  - Click email to view full content and go back using “Go Back” button.
+  - Star important emails.
+- Fetch Gmail:
+  - Click “Fetch Gmail” button to load your real Gmail inbox into the app.
 
-- Click **"Generate Email"** to enter a prompt and get a professional email.
-- Click **"Detect Spam Email"** to test whether content is spam.
-- Use the **Inbox sidebar** to browse spam or non-spam emails.
-- Use **checkboxes** to select and delete specific emails.
+🧠 Model & Prompting Logic
 
----
+All LLM requests are sent to:
+http://localhost:11434/api/chat
 
-## 🧠 Model & Prompting Logic
+Using Mistral via Ollama.
 
-- All LLM requests are sent to `http://localhost:11434/api/chat` using Mistral.
-- Email generation prompt uses:
-  ```python
-  "You are a helpful assistant that writes professional emails."
-  ```
-- Spam detection prompt uses:
-  ```python
-  "You are a spam detection AI. Respond with only 'Spam' or 'Not Spam' based on the email content."
-  ```
+Email Generation Prompt:
+"You are a helpful assistant that writes professional emails."
 
+Spam Detection Prompt:
+"You are a spam detection AI. Respond with only 'Spam' or 'Not Spam' based on the email content."
 
-## 📜 License
+📌 Notes
 
-This project is for educational/demo purposes. Adapt as needed for production use.
+- Email rendering uses HTML safely with proper formatting.
+- Gmail fetching requires one-time verification to create token.json.
+- All emails are categorized for better filtering and stored locally.
