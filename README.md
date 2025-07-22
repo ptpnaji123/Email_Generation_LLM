@@ -77,32 +77,6 @@ Then visit in your browser:
 
     http://localhost:5000
 
-📁 Project Structure
-
-Email_Generation_LLM/
-│
-├── app.py                  # Main Flask app
-├── testmail.py             # Email generator using LLM
-├── classify_email.py       # Spam detection logic using Mistral
-├── gmail_fetcher.py        # Gmail API integration
-├── storage.py              # Local JSON storage handler
-├── inbox_data.json         # Stores categorized email data
-├── credentials.json        # OAuth credentials for Gmail (downloaded from Google Cloud)
-├── token.json              # Stores user's Gmail access tokens
-│
-├── templates/              # Jinja2 HTML templates
-│   ├── home.html
-│   ├── inbox.html
-│   ├── index.html
-│   ├── spam.html
-│   └── view_email.html
-│
-├── static/
-│   └── styles.css          # Frontend styles
-│
-├── requirements.txt
-├── .gitignore
-└── README.md               # You're reading it
 
 ✅ Usage Instructions
 
