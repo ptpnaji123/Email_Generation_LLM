@@ -1,10 +1,202 @@
 {
     "mail": {
-        "general": [],
-        "promotion": [],
-        "social": []
+        "general": [
+            {
+                "subject": "hi",
+                "from": "Mohammed Naji <mdnaji9447@gmail.com>",
+                "date": "July 24, 2025",
+                "body": "hii\r\nhow are you?",
+                "paragraphs": [],
+                "sub_category": "General",
+                "starred": false,
+                "read": true
+            },
+            {
+                "subject": "Confirm Your Options",
+                "from": "DP World Careers <DPWorldCareers@italent.dpworld.com>",
+                "date": "July 24, 2025",
+                "body": "Hello Mohammed, <br/><br/>One final step to update your options. Read and confirm below. <br/><br/>You agree that DP World may collect, use and disclose your personal data which you have provided in this form, for providing job alerts and recruiting marketing material that you have agreed to receive, in accordance with our data protection policy [available at link]. Click the below link to confirm that you agree to receive: Marketing Communications, Job Alerts (CX_1) <br/><br/><a href=\"https://ehpv.fa.em2.oraclecloud.com:443/hcmUI/CandidateExperience/s/5AdZJPBYTv\" target=\"_blank\">Confirm your options</a>&nbsp;<br/><br/>Sincerely, <br/>DP World Recruiting Team",
+                "paragraphs": [],
+                "sub_category": "General",
+                "starred": false,
+                "read": true
+            },
+            {
+                "subject": "hi",
+                "from": "Mohammed Naji <mdnaji9447@gmail.com>",
+                "date": "July 25, 2025",
+                "body": "hii\r\nhow are you?",
+                "paragraphs": [],
+                "sub_category": "General",
+                "starred": false,
+                "read": true
+            },
+            {
+                "subject": "Confirm Your Options",
+                "from": "DP World Careers <DPWorldCareers@italent.dpworld.com>",
+                "date": "July 25, 2025",
+                "body": "Hello Mohammed, <br/><br/>One final step to update your options. Read and confirm below. <br/><br/>You agree that DP World may collect, use and disclose your personal data which you have provided in this form, for providing job alerts and recruiting marketing material that you have agreed to receive, in accordance with our data protection policy [available at link]. Click the below link to confirm that you agree to receive: Marketing Communications, Job Alerts (CX_1) <br/><br/><a href=\"https://ehpv.fa.em2.oraclecloud.com:443/hcmUI/CandidateExperience/s/5AdZJPBYTv\" target=\"_blank\">Confirm your options</a>&nbsp;<br/><br/>Sincerely, <br/>DP World Recruiting Team",
+                "paragraphs": [],
+                "sub_category": "General",
+                "starred": false,
+                "read": true
+            }
+        ],
+        "promotion": [
+            {
+                "subject": "Improve supply chain accuracy with self-service analytics",
+                "from": "Alteryx <analytics@e.alteryx.com>",
+                "date": "July 24, 2025",
+                "body": "Thought Leadership\r\n\r\nTips for Optimizing Supply Chain Planning\r\n\r\nHi Mohammed,\r\n\r\nConsumers aren\u2019t the only ones susceptible to \u2018panic buying\u2019. Ordering too many products to avoid inventory stockouts is a common, but costly challenge in supply chain operations.\r\n\r\nLearn how <https://email.alteryx.com/Nzc1LUJQTi0wMjIAAAGbYwIAhP6r-8eqlCNShcp5tuGXEa7NcrXhg4GfzBZe1W4GjkWA3yELoJ1ljpWywSLdx3VRD4U=> to reduce the risk and revenue loss associated with overstocks with tips from supply chain experts.\r\n\r\nPlus, learn from supply chain thought leaders how to assess the quality of supply chain processes and leverage technology to improve demand planning.\r\n\r\nRead Now - https://www.alteryx.com/blog/is-your-organization-gaming-supply-chain-planning?utm_source=marketo&utm_medium=email&utm_campaign=FY25_Global_AllRegions_LifecycleMarketing_SupplyChain_Manufacturing_email_nurture&utm_content=EM1_main_offer\r\n\r\nCheck out this Alter.Everything Podcast episode with Susan Walsh, The Classification Guru, where she joins us to talk about fixing dirty data in the supply chain.\r\n\r\nWatch Now - https://community.alteryx.com/t5/Alter-Everything-Podcast/167-Fixing-Dirty-Data-in-the-Supply-Chain/ba-p/1317393?utm_source=marketo&utm_medium=email&utm_campaign=FY25_Global_AllRegions_LifecycleMarketing_SupplyChain_Manufacturing_nurture&utm_content=secondoffer\r\n\r\n\r\n<https://email.alteryx.com/Nzc1LUJQTi0wMjIAAAGbYwIAhA9k3FLMhbzkerDRuZPISh59Fea73xEKlwTlz3Yv0MDoGcCki86Z3icYXanGhdQkZi8=>\r\n\r\n\u00a9 \r\n2025 Alteryx, Inc.\r\n\r\n3347 Michelson Drive Suite 400 | Irvine, CA 92612 | +1 888 836 4274 <tel:18888364274> \r\n\r\nwww.alteryx.com <https://email.alteryx.com/Nzc1LUJQTi0wMjIAAAGbYwIAhA9k3FLMhbzkerDRuZPISh59Fea73xEKlwTlz3Yv0MDoGcCki86Z3icYXanGhdQkZi8=> \r\n\r\n\r\n   <https://email.alteryx.com/Nzc1LUJQTi0wMjIAAAGbYwIAhBdjm6SHiDucOgxejlCHPmhOLyO24HXbqg-apXmSMNiefpWUoGY2sgwiwJ_Mf2IeUm8=>        <https://email.alteryx.com/Nzc1LUJQTi0wMjIAAAGbYwIAhPC2HFwfl7V_oIMkaOU-AUBS7bxyxaA8hRSO7BCVDi2ntQbEMSrQK1wV1onmin0j-p4=>        <https://email.alteryx.com/Nzc1LUJQTi0wMjIAAAGbYwIAhFP4Yegf6C81VGGib7y3DQNOH34py5XT0ClNhd3OAEujHevwxFFzkqkVkHAhcal0spc=>        <https://email.alteryx.com/Nzc1LUJQTi0wMjIAAAGbYwIAhJcmzGPvaTvUX-CYOLR-eylYEuBhkTK8lco9N3_AxvcIcOiJ7dgI4KVJjShDD_ALn7Y=>       <https://email.alteryx.com/Nzc1LUJQTi0wMjIAAAGbYwIAhLJNJ2ivXkUAAkHaWMSxir8KvUxjqttD21dH9vFM3KOYQVuTpXCKp0l2kgM62U4-6aU=>\r\n\r\n\r\nThis email was sent to mdnaji9447@gmail.com. If you no longer wish to receive these emails, you may click here to unsubscribe <[[https://info.alteryx.com/UnsubscribePage.html?mkt_unsubscribe=1&mkt_tok=Nzc1LUJQTi0wMjIAAAGbYwIAhIyAEPsfqw90M_1KTLIggRn8hCCrjcu8KfKYGFcB17vzd46wSit_NDcURX6n_j_2dFH-DRLQB_ePDz9PFw4yi3yWSnIKA_2EqW8eTSqBCW0]]>. You may view our privacy policy <https://email.alteryx.com/Nzc1LUJQTi0wMjIAAAGbYwIAhJDXSCDDvb9bzzQNy642PkjFALFJrkZGU0Yqd7EsuEKWkxMrrm5vLgZMn-9v-wiBe1E=> online.",
+                "paragraphs": [],
+                "sub_category": "Promotion",
+                "starred": false,
+                "read": true
+            },
+            {
+                "subject": "Your recent job application for Intern - AI/ML - 17720",
+                "from": "DP World Careers <DPWorldCareers@italent.dpworld.com>",
+                "date": "July 24, 2025",
+                "body": "Hello, Mohammed,\r\n<br>\r\n<br>We received your job application for Intern - AI/ML - 17720. If your profile corresponds to our requirements, a member of our Recruiting team will contact you.\r\n<br>\r\n<br>If you were requested to provide additional info about your job application, or if you want to manage your profile, go to your <a href=\"https://ehpv.fa.em2.oraclecloud.com:443/hcmUI/CandidateExperience/s/BeOywjK41b\" target=\"_blank\">candidate self service page</a>.\r\n<br>\r\n<br>Sincerely,\r\n<br>\r\n<br>DP World\r\n<br>\r\n<br>Recruiting Team",
+                "paragraphs": [],
+                "sub_category": "Promotion",
+                "starred": false,
+                "read": true
+            },
+            {
+                "subject": "Hi Mohammed,\r\n\r\nGet ready to shop! Flipkart's Big Billion Days are here. Enjoy u...",
+                "body": "Hi Mohammed,\r\n\r\nGet ready to shop! Flipkart's Big Billion Days are here. Enjoy up to 70% OFF on mobiles, laptops, TVs, and more.\r\n\r\n\ud83d\udc49 Shop Now: https://www.flipkart.com/big-billion-deals\r\n\r\nHurry! Offers end soon.\r\n\r\nCheers,  \r\nFlipkart Team",
+                "paragraphs": [],
+                "date": "July 24, 2025",
+                "sub_category": "Promotion",
+                "starred": false,
+                "read": true
+            },
+            {
+                "subject": "Improve supply chain accuracy with self-service analytics",
+                "from": "Alteryx <analytics@e.alteryx.com>",
+                "date": "July 25, 2025",
+                "body": "Thought Leadership\r\n\r\nTips for Optimizing Supply Chain Planning\r\n\r\nHi Mohammed,\r\n\r\nConsumers aren\u2019t the only ones susceptible to \u2018panic buying\u2019. Ordering too many products to avoid inventory stockouts is a common, but costly challenge in supply chain operations.\r\n\r\nLearn how <https://email.alteryx.com/Nzc1LUJQTi0wMjIAAAGbYwIAhP6r-8eqlCNShcp5tuGXEa7NcrXhg4GfzBZe1W4GjkWA3yELoJ1ljpWywSLdx3VRD4U=> to reduce the risk and revenue loss associated with overstocks with tips from supply chain experts.\r\n\r\nPlus, learn from supply chain thought leaders how to assess the quality of supply chain processes and leverage technology to improve demand planning.\r\n\r\nRead Now - https://www.alteryx.com/blog/is-your-organization-gaming-supply-chain-planning?utm_source=marketo&utm_medium=email&utm_campaign=FY25_Global_AllRegions_LifecycleMarketing_SupplyChain_Manufacturing_email_nurture&utm_content=EM1_main_offer\r\n\r\nCheck out this Alter.Everything Podcast episode with Susan Walsh, The Classification Guru, where she joins us to talk about fixing dirty data in the supply chain.\r\n\r\nWatch Now - https://community.alteryx.com/t5/Alter-Everything-Podcast/167-Fixing-Dirty-Data-in-the-Supply-Chain/ba-p/1317393?utm_source=marketo&utm_medium=email&utm_campaign=FY25_Global_AllRegions_LifecycleMarketing_SupplyChain_Manufacturing_nurture&utm_content=secondoffer\r\n\r\n\r\n<https://email.alteryx.com/Nzc1LUJQTi0wMjIAAAGbYwIAhA9k3FLMhbzkerDRuZPISh59Fea73xEKlwTlz3Yv0MDoGcCki86Z3icYXanGhdQkZi8=>\r\n\r\n\u00a9 \r\n2025 Alteryx, Inc.\r\n\r\n3347 Michelson Drive Suite 400 | Irvine, CA 92612 | +1 888 836 4274 <tel:18888364274> \r\n\r\nwww.alteryx.com <https://email.alteryx.com/Nzc1LUJQTi0wMjIAAAGbYwIAhA9k3FLMhbzkerDRuZPISh59Fea73xEKlwTlz3Yv0MDoGcCki86Z3icYXanGhdQkZi8=> \r\n\r\n\r\n   <https://email.alteryx.com/Nzc1LUJQTi0wMjIAAAGbYwIAhBdjm6SHiDucOgxejlCHPmhOLyO24HXbqg-apXmSMNiefpWUoGY2sgwiwJ_Mf2IeUm8=>        <https://email.alteryx.com/Nzc1LUJQTi0wMjIAAAGbYwIAhPC2HFwfl7V_oIMkaOU-AUBS7bxyxaA8hRSO7BCVDi2ntQbEMSrQK1wV1onmin0j-p4=>        <https://email.alteryx.com/Nzc1LUJQTi0wMjIAAAGbYwIAhFP4Yegf6C81VGGib7y3DQNOH34py5XT0ClNhd3OAEujHevwxFFzkqkVkHAhcal0spc=>        <https://email.alteryx.com/Nzc1LUJQTi0wMjIAAAGbYwIAhJcmzGPvaTvUX-CYOLR-eylYEuBhkTK8lco9N3_AxvcIcOiJ7dgI4KVJjShDD_ALn7Y=>       <https://email.alteryx.com/Nzc1LUJQTi0wMjIAAAGbYwIAhLJNJ2ivXkUAAkHaWMSxir8KvUxjqttD21dH9vFM3KOYQVuTpXCKp0l2kgM62U4-6aU=>\r\n\r\n\r\nThis email was sent to mdnaji9447@gmail.com. If you no longer wish to receive these emails, you may click here to unsubscribe <[[https://info.alteryx.com/UnsubscribePage.html?mkt_unsubscribe=1&mkt_tok=Nzc1LUJQTi0wMjIAAAGbYwIAhIyAEPsfqw90M_1KTLIggRn8hCCrjcu8KfKYGFcB17vzd46wSit_NDcURX6n_j_2dFH-DRLQB_ePDz9PFw4yi3yWSnIKA_2EqW8eTSqBCW0]]>. You may view our privacy policy <https://email.alteryx.com/Nzc1LUJQTi0wMjIAAAGbYwIAhJDXSCDDvb9bzzQNy642PkjFALFJrkZGU0Yqd7EsuEKWkxMrrm5vLgZMn-9v-wiBe1E=> online.",
+                "paragraphs": [],
+                "sub_category": "Promotion",
+                "starred": true,
+                "read": false
+            },
+            {
+                "subject": "Your recent job application for Intern - AI/ML - 17720",
+                "from": "DP World Careers <DPWorldCareers@italent.dpworld.com>",
+                "date": "July 25, 2025",
+                "body": "Hello, Mohammed,\r\n<br>\r\n<br>We received your job application for Intern - AI/ML - 17720. If your profile corresponds to our requirements, a member of our Recruiting team will contact you.\r\n<br>\r\n<br>If you were requested to provide additional info about your job application, or if you want to manage your profile, go to your <a href=\"https://ehpv.fa.em2.oraclecloud.com:443/hcmUI/CandidateExperience/s/BeOywjK41b\" target=\"_blank\">candidate self service page</a>.\r\n<br>\r\n<br>Sincerely,\r\n<br>\r\n<br>DP World\r\n<br>\r\n<br>Recruiting Team",
+                "paragraphs": [],
+                "sub_category": "Promotion",
+                "starred": false,
+                "read": false
+            },
+            {
+                "subject": "Subject: \ud83c\udf89 You have 3 new friend requests on Facebook\r\n\r\nBody:\r\n\r\nHi Mohammed,\r\n...",
+                "body": "Subject: \ud83c\udf89 You have 3 new friend requests on Facebook\r\n\r\nBody:\r\n\r\nHi Mohammed,\r\n\r\nJohn, Priya, and 1 other have sent you friend requests.\r\n\r\n\ud83d\udc49 View Friend Requests\r\n\r\nStay connected with your friends and family on Facebook.\r\n\r\n\u2013 The Facebook Team",
+                "paragraphs": [],
+                "date": "July 25, 2025",
+                "sub_category": "Promotion",
+                "starred": false,
+                "read": false
+            },
+            {
+                "subject": "Don\u2019t miss our biggest sale of the year!\r\n\r\nGet 50% OFF on laptops, smartphones,...",
+                "body": "Don\u2019t miss our biggest sale of the year!\r\n\r\nGet 50% OFF on laptops, smartphones, smartwatches and more.\r\n\r\n\ud83d\udca5 Offer valid from July 26\u201328 only.\r\n\r\n\ud83d\uded2 Shop Now\r\n\r\nHappy shopping,\r\nThe Example Store Team",
+                "paragraphs": [],
+                "date": "July 25, 2025",
+                "sub_category": "Promotion",
+                "starred": false,
+                "read": false
+            },
+            {
+                "subject": "Subject: \ud83c\udf89 You have 3 new friend requests on Facebook\r\n\r\nBody:\r\n\r\nHi Mohammed,\r\n...",
+                "body": "Subject: \ud83c\udf89 You have 3 new friend requests on Facebook\r\n\r\nBody:\r\n\r\nHi Mohammed,\r\n\r\nJohn, Priya, and 1 other have sent you friend requests.\r\n\r\n\ud83d\udc49 View Friend Requests\r\n\r\nStay connected with your friends and family on Facebook.\r\n\r\n\u2013 The Facebook Team",
+                "paragraphs": [],
+                "date": "July 25, 2025",
+                "sub_category": "Promotion",
+                "starred": false,
+                "read": false
+            }
+        ],
+        "social": [
+            {
+                "subject": "Hi Mohammed,\r\n\r\nJohn Doe tagged you in a new photo.\r\n\r\nClick here to view the ph...",
+                "body": "Hi Mohammed,\r\n\r\nJohn Doe tagged you in a new photo.\r\n\r\nClick here to view the photo: https://www.facebook.com/photo/...\r\n\r\nHave fun,\r\nThe Facebook Team",
+                "paragraphs": [],
+                "date": "July 24, 2025",
+                "sub_category": "Social",
+                "starred": true,
+                "read": true
+            },
+            {
+                "subject": "Subject: \ud83d\udcbc Rahul Agarwal wants to connect with you on LinkedIn\r\n\r\nBody:\r\n\r\nHi Mo...",
+                "body": "Subject: \ud83d\udcbc Rahul Agarwal wants to connect with you on LinkedIn\r\n\r\nBody:\r\n\r\nHi Mohammed,\r\n\r\nRahul Agarwal, Software Engineer at TCS, has sent you a connection request on LinkedIn.\r\n\r\nHe wrote:\r\n\"Hi Mohammed, I came across your profile and was impressed with your work in AI. I\u2019d love to connect and stay in touch!\"\r\n\r\n\ud83d\udc49 View Invitation\r\n\r\nCheers,\r\n\u2014 The LinkedIn Team",
+                "paragraphs": [],
+                "date": "July 25, 2025",
+                "sub_category": "Social",
+                "starred": false,
+                "read": false
+            }
+        ]
     },
     "spam": {
-        "spam": []
+        "spam": [
+            {
+                "subject": "Subject: Unclaimed Funds Notification - Immediate Action Required!",
+                "greeting": "Dear valued recipient,",
+                "paragraphs": [
+                    "We are writing to inform you about an unclaimed funds of $50,000 that has been traced back to your name in our system. This sum is the result of a recent financial audit conducted by our company and we have been unable to locate the rightful owner.",
+                    "In order to release these funds to you, we require some personal information to verify your identity. This includes your full name, date of birth, current address, and contact number. Once we receive this information, we will be able to process the payment and transfer the funds to your designated bank account.",
+                    "Please be advised that if we do not hear back from you within 7 days, we will be obligated to forfeit these funds to the government. We strongly recommend that you take advantage of this opportunity before it is too late.",
+                    "If you have any questions or concerns, please do not hesitate to contact us at [support@example.com](mailto:support@example.com) or by phone at 1-800-555-5555. We are available 24/7 to assist you with any inquiries you may have.",
+                    "Thank you for your prompt attention to this matter and we look forward to hearing from you soon."
+                ],
+                "closing": "Best regards,\n[Your Name]\n[Your Title]\n[Your Company]",
+                "date": "July 24, 2025",
+                "sub_category": "Spam",
+                "starred": true,
+                "read": true
+            },
+            {
+                "subject": "Confirm your identity",
+                "from": "DP World Careers <DoNotReply@italent.dpworld.com>",
+                "date": "July 24, 2025",
+                "body": "Hello Mohammed,\r\n<br>\r\n<br>Just one more step before you get started.\r\n<br>\r\n<br>You must confirm your identity using the one-time pass code : 766266\r\n<br>\r\n<br>Note : This code will expire in 10 minutes.\r\n<br>\r\n<br>Sincerely,\r\n<br>\r\n<br>DP World Recruiting Team.",
+                "paragraphs": [],
+                "sub_category": "Spam",
+                "starred": true,
+                "read": true
+            },
+            {
+                "subject": "Dear Customer,\r\n\r\nWe noticed suspicious activity in your bank account. To avoid ...",
+                "body": "Dear Customer,\r\n\r\nWe noticed suspicious activity in your bank account. To avoid account suspension, please verify your details immediately by clicking the link below:\r\n\r\n\ud83d\udc49 http://secure-verify-account-fakebank.com\r\n\r\nFailure to do so will result in permanent closure of your account.\r\n\r\nRegards,  \r\nFakeBank Security Team",
+                "paragraphs": [],
+                "date": "July 24, 2025",
+                "sub_category": "Spam",
+                "starred": false,
+                "read": true
+            },
+            {
+                "subject": "Confirm your identity",
+                "from": "DP World Careers <DoNotReply@italent.dpworld.com>",
+                "date": "July 25, 2025",
+                "body": "Hello Mohammed,\r\n<br>\r\n<br>Just one more step before you get started.\r\n<br>\r\n<br>You must confirm your identity using the one-time pass code : 766266\r\n<br>\r\n<br>Note : This code will expire in 10 minutes.\r\n<br>\r\n<br>Sincerely,\r\n<br>\r\n<br>DP World Recruiting Team.",
+                "paragraphs": [],
+                "sub_category": "Spam",
+                "starred": false,
+                "read": false
+            },
+            {
+                "subject": "Congratulations! You\u2019ve been selected to receive a brand new iPhone 15 for free!...",
+                "body": "Congratulations! You\u2019ve been selected to receive a brand new iPhone 15 for free!\r\nClick the link below and fill in your details to claim your prize today.\r\n\r\n\ud83d\udd17 Claim iPhone Now\r\n\r\nLimited time offer. Don\u2019t miss out!",
+                "paragraphs": [],
+                "date": "July 25, 2025",
+                "sub_category": "Spam",
+                "starred": false,
+                "read": false
+            }
+        ]
     }
 }

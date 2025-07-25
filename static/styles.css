@@ -348,3 +348,129 @@ select {
 .go-back-btn:hover {
     background-color: #ccc;
 }
+/* Enhanced Home Page Styles */
+.welcome-heading {
+    font-size: 36px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 10px;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.welcome-subtext {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.home-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.home-btn {
+    padding: 16px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    width: 260px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+/* Button Variants */
+.home-btn.generate {
+    background-color: #28a745;
+    color: white;
+}
+
+.home-btn.generate:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.home-btn.detect {
+    background-color: #dc3545;
+    color: white;
+}
+
+.home-btn.detect:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
+
+.home-btn.fetch {
+    background-color: #007bff;
+    color: white;
+}
+
+.home-btn.fetch:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.inbox-heading {
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+/* Checkbox label */
+.select-label {
+    font-size: 14px;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* New email highlight */
+.unread {
+    border-left: 4px solid #007bff;
+    background-color: #f8fbff;
+}
+
+/* New label */
+.new-label {
+    color: #e63946;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 10px;
+    background-color: #ffe6e6;
+    padding: 2px 6px;
+    border-radius: 5px;
+}
+
+/* Email subject hover */
+.email-subject:hover {
+    text-decoration: underline;
+    color: #007bff;
+}
+
+/* No email message */
+.no-emails-msg {
+    font-size: 16px;
+    color: #777;
+    text-align: center;
+    margin-top: 30px;
+}
+.unread {
+    font-weight: bold;
+}
+

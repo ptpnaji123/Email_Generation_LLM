@@ -33,10 +33,10 @@
 
             <div class="email-details">
                 <a href="{{ url_for('view_email', category=category, email_id=loop.index0, sub=sub_filter) }}"
-                   class="email-subject"
-                   style="font-weight: {{ 'bold' if not email.get('read', False) else 'normal' }};">
-                   {{ email.subject }}
+                    class="email-subject {% if not email.get('read', False) %}unread{% endif %}">
+                    {{ email.subject }}
                 </a>
+
 
                 <div class="email-preview"
                      style="font-weight: {{ 'bold' if not email.get('read', False) else 'normal' }};">

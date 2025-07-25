@@ -3,12 +3,14 @@
 <head>
     <title>{% block title %}Email Assistant{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="layout">
         <div class="sidebar">
-            <h2>📥 Inbox</h2>
             <a href="{{ url_for('home') }}" class="nav-btn">🏠 Home</a>
+            <h2>📥 Inbox</h2>
+
             <form action="{{ url_for('inbox') }}" method="get">
                 <input type="hidden" name="filter" value="all">
                 <button type="submit">📧 All Mails</button>
@@ -18,6 +20,7 @@
                 <input type="hidden" name="filter" value="spam">
                 <button type="submit" class="spam-btn">🚫 Spam Mails</button>
             </form>
+
             <form action="{{ url_for('inbox') }}" method="get">
                 <input type="hidden" name="filter" value="starred">
                 <button type="submit" class="starred-btn">⭐ Starred Mails</button>

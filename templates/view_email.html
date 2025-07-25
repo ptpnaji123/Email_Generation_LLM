@@ -2,9 +2,11 @@
 {% block title %}View Email{% endblock %}
 {% block content %}
 
-<a href="{{ url_for('inbox', filter=category, sub=request.args.get('sub', 'general')) }}" class="go-back-btn">
+<a href="{{ url_for('inbox', category=category, sub=request.args.get('sub', 'general')) }}" class="go-back-btn">
     ← Go Back
-</a><div class="email-content-box" style="
+</a>
+
+<div class="email-content-box" style="
     padding: 20px;
     background-color: white;
     border-radius: 10px;
@@ -17,20 +19,21 @@
 ">
     <style>
         .email-content-box p {
-            margin: 4px 0;  /* Reduce space between paragraphs */
-            line-height: 1.4; /* Tighter line spacing */
+            margin: 4px 0;
+            line-height: 1.4;
         }
     </style>
 
-    <h5>{{ email.subject }}</h5>
     <p><strong>Date:</strong> {{ email.date }}</p>
-    <p><strong>From:</strong> {{ email.sender }}</p>
     <hr>
+
     <div style="font-size: 16px;">
-        {{ email.body|safe }}
+        {% if email.body %}
+            {{ email.body | safe }}
+        {% else %}
+            <em>No email content available.</em>
+        {% endif %}
     </div>
 </div>
-
-
 
 {% endblock %}

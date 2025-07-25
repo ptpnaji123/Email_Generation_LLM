@@ -15,7 +15,6 @@ def fetch_gmail():
     for email in emails:
         category = classify_email(email['body'])
         is_spam = (category.lower() == "spam")
-
         save_mail({
             "subject": email["subject"],
             "from": email["from"],
@@ -43,13 +42,10 @@ def generate():
         if "error" not in result:
             result["date"] = datetime.now().strftime("%B %d, %Y")
             content = " ".join(result.get("paragraphs", []))
-            category = classify_email(content)
-            result["sub_category"] = category
+            result["sub_category"] = classify_email(content)
             result["starred"] = False
             result["read"] = False
-            is_spam = category.lower() == "spam"
-            save_mail(result, is_spam=is_spam)
-            email_data = result
+            email_data = result  # No saving to storage
         else:
             email_data = {"error": result["error"]}
 
@@ -87,14 +83,10 @@ def inbox():
         emails = get_all_emails("spam", "spam")
         heading = "🚫 Spam Mails"
         category = "spam"
-
     elif filter_main == "starred":
-        all_mails = get_all_emails("mail", "all")
-        all_spams = get_all_emails("spam", "all")
-        emails = [e for e in all_mails + all_spams if e.get("starred", False)]
+        emails = [e for e in get_all_emails("mail", "all") + get_all_emails("spam", "all") if e.get("starred")]
         heading = "⭐ Starred Mails"
         category = "starred"
-
     else:
         emails = get_all_emails("mail", sub_filter)
         heading = {
@@ -108,39 +100,35 @@ def inbox():
 
 @app.route("/inbox/<category>/<int:email_id>")
 def view_email(category, email_id):
-    sub_filter = request.args.get("sub")
-    if not sub_filter:
-        sub_filter = "spam" if category == "spam" else "general"
+    sub_filter = request.args.get("sub") or ("spam" if category == "spam" else "general")
     if category == "spam":
         sub_filter = "spam"
 
-    email = get_email_by_id(category, email_id, sub_filter)
-    if not email:
-        return "Email not found", 404
+    if category == "starred":
+        # Look into both mail and spam for starred
+        emails = [e for e in get_all_emails("mail", "all") + get_all_emails("spam", "all") if e.get("starred")]
+    else:
+        emails = get_all_emails(category, sub_filter)
 
-    if not email.get("read", False):
-        email["read"] = True
-        all_emails = get_all_emails(category, sub_filter)
-        if 0 <= email_id < len(all_emails):
+    if 0 <= email_id < len(emails):
+        email = emails[email_id]
+        if not email.get("read", False) and category != "starred":
+            email["read"] = True
+            all_emails = get_all_emails(category, sub_filter)
             all_emails[email_id] = email
             from storage import _load_data, _save_data
-            store = _load_data()
-            store[category][sub_filter] = all_emails
-            _save_data(store)
-
-    return render_template("view_email.html", email=email)
+            data = _load_data()
+            data[category][sub_filter] = all_emails
+            _save_data(data)
+        return render_template("view_email.html", email=email)
+    return "Email not found", 404
 
 @app.route("/delete", methods=["POST"])
 def delete_emails():
     category = request.form.get("category")
-    sub_filter = request.form.get("sub")
+    sub_filter = request.form.get("sub") or "general"
 
-    if not sub_filter or category == "spam":
-        sub_filter = "spam" if category == "spam" else "general"
-
-    selected = request.form.getlist("selected")
-    selected_ids = [int(idx) for idx in selected]
-
+    selected_ids = [int(i) for i in request.form.getlist("selected")]
     if category in ("mail", "spam") and selected_ids:
         delete_emails_by_ids(category, selected_ids, sub_filter)
 
@@ -149,25 +137,18 @@ def delete_emails():
 
 @app.route("/toggle_star/<category>/<int:email_id>", methods=["POST"])
 def toggle_star(category, email_id):
-    sub_filter = request.args.get("sub")
-    if not sub_filter:
-        sub_filter = "spam" if category == "spam" else "general"
-    if category == "spam":
-        sub_filter = "spam"
-
+    sub_filter = request.args.get("sub") or ("spam" if category == "spam" else "general")
     email = get_email_by_id(category, email_id, sub_filter)
     if not email:
         return jsonify({"error": "Email not found"}), 404
 
     email["starred"] = not email.get("starred", False)
-
     all_emails = get_all_emails(category, sub_filter)
-    if 0 <= email_id < len(all_emails):
-        all_emails[email_id] = email
-        from storage import _load_data, _save_data
-        store = _load_data()
-        store[category][sub_filter] = all_emails
-        _save_data(store)
+    all_emails[email_id] = email
+    from storage import _load_data, _save_data
+    data = _load_data()
+    data[category][sub_filter] = all_emails
+    _save_data(data)
 
     return jsonify({"starred": email["starred"]})
 

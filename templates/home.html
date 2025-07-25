@@ -1,14 +1,23 @@
 {% extends "base.html" %}
 {% block title %}Home - Email Assistant{% endblock %}
+
 {% block content %}
 <div class="home-wrapper">
-    <h1>Welcome to Email Assistant / Spam Detection</h1>
-    <div class="button-group">
-        <a href="{{ url_for('generate') }}"><button class="generate-btn">📧 Generate Email</button></a>
-        <a href="{{ url_for('spam') }}"><button class="spam-btn">🚫 Detect Spam Email</button></a>
-        <form action="{{ url_for('fetch_gmail') }}" method="get">
-    <button class="btn btn-primary">📥 Fetch Gmail</button>
-</form>
+    <h1 class="welcome-heading">👋 Welcome to Email Assistant</h1>
+    <p class="welcome-subtext">Smart tools for email generation and spam detection</p>
+
+    <div class="button-group home-buttons">
+        <a href="{{ url_for('generate') }}">
+            <button class="home-btn generate">📧 Generate Email</button>
+        </a>
+
+        <a href="{{ url_for('spam') }}">
+            <button class="home-btn detect">🚫 Detect Spam Email</button>
+        </a>
+
+        <form action="{{ url_for('fetch_gmail') }}" method="get" style="display: inline;">
+            <button class="home-btn fetch">📥 Fetch Gmail</button>
+        </form>
     </div>
 </div>
 {% endblock %}
